@@ -9,10 +9,11 @@ import { PaisService } from 'src/app/services/pais.service';
 })
 export class TemplateComponent implements OnInit {
   usuario = {
-    nombre: '',
-    apellido: '',
-    correo: '',
-    pais: ''
+    nombre: 'Ruben',
+    apellido: 'Portela',
+    correo: 'ruben_sanfer_3@hotmail.com',
+    pais: 'ESP',
+    genero: 'M',
   };
 
   paises: any[] = [];
@@ -24,8 +25,8 @@ export class TemplateComponent implements OnInit {
       this.paises = paises;
       this.paises.unshift({
         nombre: '[Seleccione Pais]',
-        codigo: ''
-      })
+        codigo: '',
+      });
       //console.log(this.paises);
     });
   }
@@ -37,6 +38,5 @@ export class TemplateComponent implements OnInit {
         control.markAsTouched();
       });
     }
-    
   }
 }
